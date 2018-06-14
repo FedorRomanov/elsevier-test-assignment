@@ -1,6 +1,6 @@
 Dear Candidate,
 
-Elevier Life Science needs your help finalising one of our services which is really important for us. The service is called Aggregator and it joins together information about orders from Order service, Offer Service, Product service and Image Service.
+Elevier Life Science needs your help finalising one of our services which is really important for us. The service is called Aggregator and it joins together information about orders from Order service, Offer Service and Product service.
 
 It works as follows:
 
@@ -8,9 +8,7 @@ It works as follows:
 
 - Then it uses the OfferId and ProductId to retrieve information from Offer service and Product service respectively
 
-- Then it uses the product title, from the Product Service, to retrieve a list of images from the ImageService.
-
-- The Aggregator uses the information retrieved from the Order Service, Offer Service, Product Service and returns an EnrichedOrder.
+- The Aggregator uses the information retrieved from the Order Service, Offer Service and Product Service and returns an EnrichedOrder.
 
 
 Restrictions:
