@@ -1,0 +1,42 @@
+Dear Candidate,
+
+Elevier Life Science needs your help finalising one of our services which is really important for us. The service is called Aggregator and it joins together information about orders from Order service, Offer Service, Product service and Image Service.
+
+It works as follows:
+
+- The Aggregator uses sellerId to retrieve OrderId, OfferId, and ProductId from the Order Service.
+
+- Then it uses the OfferId and ProductId to retrieve information from Offer service and Product service respectively
+
+- Then it uses the product title, from the Product Service, to retrieve a list of images from the ImageService.
+
+- The Aggregator uses the information retrieved from the Order Service, Offer Service, Product Service and returns an EnrichedOrder.
+
+
+Restrictions:
+
+- Every service can fail. The following guidelines for failures are :
+
+- If Order service fails, throw an exception and return nothing, because we cannot fetch any data from Product or Offer service
+
+- If Order service succeeds and Offer Service succeeds but Product service fails, we return an EnrichedOrder with Info from Order service and Offer service; Product id is -1 and product title is null
+
+- If Order service succeeds and Product service succeeds but Offer service fails, we return EnrichedOrder with Info from Order service and Product service; Offer id is -1 and Offer condition is UNKNOWN
+
+- If Order service succeeds but Product service and Offer Service fails, we return an EnrichedOrder with info from Order service only; Offer id is -1 and Offer condition is UNKNOWN. Product id is -1 and product title is null
+
+- If Order service, Product service and Offer service all succeeds, we return an EnrichedOrder with info from Order service, Offer Service and Product service
+
+The team that was working on this service already wrote all the unit test for Aggregator service and implemented Order, Offer and Product services
+
+However, they haven't gotten around to implementing the Aggregator service itself, though. Can you please help them by implementing it?
+
+Important: your application should be self-contained, no installation required. 
+
+Extras:
+
+- Make a REST API out of the aggregator and the other services
+
+- Make a consumer for the REST API
+ 
+- Whatever you love
