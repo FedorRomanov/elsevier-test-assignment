@@ -29,7 +29,7 @@ The team that was working on this service already wrote all the unit test for Ag
 
 However, they haven't gotten around to implementing the Aggregator service itself, though. Can you please help them by implementing it?
 
-Important: your application should be self-contained, no installation required. 
+You are done as soon as all unit tests pass.
 
 Extras:
 
